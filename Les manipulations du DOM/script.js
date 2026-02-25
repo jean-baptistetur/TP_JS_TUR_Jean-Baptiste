@@ -1,11 +1,18 @@
-/* Toutes les variables */
+
 let li = document.querySelector("#listeCourses li");
 
-/* Tous les évènements */
+
+let dateJour = new Date(Date.now());
+let dateJourFr = dateJour.toLocaleDateString('fr-FR');
+
+
+let titre = document.querySelector("h2");
+
+
+titre.textContent = titre.textContent + " : " + dateJourFr;
+
+
+
 li.addEventListener('click', function() {
-  // On bascule la classe CSS (TP14)
   this.classList.toggle("itemCheck");
 });
-
-/* Les fonctions */
-// A voir plus tard
