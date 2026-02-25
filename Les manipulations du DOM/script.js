@@ -12,6 +12,11 @@ premierLi.addEventListener('click', function() {
     this.classList.toggle("itemCheck");
 });
 
+premierLi.addEventListener('dblclick', function() {
+    this.remove();
+    alert("Produit supprimé");
+});
+
 function addProduct() {
     let valeur = myInput.value;
 
@@ -25,6 +30,11 @@ function addProduct() {
         
         nouveauLi.addEventListener('click', function() {
             this.classList.toggle("itemCheck");
+        });
+
+        nouveauLi.addEventListener('dblclick', function() {
+            this.remove();
+            alert("Produit supprimé");
         });
         
         liste.appendChild(nouveauLi);
