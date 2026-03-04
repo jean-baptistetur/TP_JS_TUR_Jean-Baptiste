@@ -1,4 +1,4 @@
-//TP 4 Type de données basiques : 
+// // TP 4 Type de données basiques : 
 // let nomMois = "Février";
 // let isHiver = true;
 
@@ -9,7 +9,7 @@
 // console.log(isHiver);
 
 
-// TP 5 : Type de données avancées
+// // TP 5 : Type de données avancées
 
 // let nomJour = "Mercredi";
 // let numJour = 4;
@@ -68,7 +68,7 @@
 // console.log(maDateV2);
 
 
-//TP 6 : LES OPÉRATEURS ARITHMÉTIQUES
+// // TP 6 : LES OPÉRATEURS ARITHMÉTIQUES
 // let nbr1 = 3;
 // let nbr2 = 7;
 // let nbr3 = 8;
