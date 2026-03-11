@@ -1,0 +1,714 @@
+[
+  {
+    "pokedexId": 1,
+    "name": "Bulbizarre",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
+    "stats": { "HP": 45, "attack": 49, "defense": 49, "special_attack": 65, "special_defense": 65, "speed": 45 },
+    "apiTypes": [
+      { "name": "Plante", "image": "https://static.wikia.nocookie.net/pokemongo/images/c/c5/Grass.png" },
+      { "name": "Poison", "image": "https://static.wikia.nocookie.net/pokemongo/images/0/05/Poison.png" }
+    ],
+    "apiGeneration": 1
+  },
+  {
+    "pokedexId": 2,
+    "name": "Herbizarre",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/2.png",
+    "stats": { "HP": 60, "attack": 62, "defense": 63, "special_attack": 80, "special_defense": 80, "speed": 60 },
+    "apiTypes": [
+      { "name": "Plante", "image": "https://static.wikia.nocookie.net/pokemongo/images/c/c5/Grass.png" },
+      { "name": "Poison", "image": "https://static.wikia.nocookie.net/pokemongo/images/0/05/Poison.png" }
+    ],
+    "apiGeneration": 1
+  },
+  {
+    "pokedexId": 3,
+    "name": "Florizarre",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/3.png",
+    "stats": { "HP": 80, "attack": 82, "defense": 83, "special_attack": 100, "special_defense": 100, "speed": 80 },
+    "apiTypes": [
+      { "name": "Plante", "image": "https://static.wikia.nocookie.net/pokemongo/images/c/c5/Grass.png" },
+      { "name": "Poison", "image": "https://static.wikia.nocookie.net/pokemongo/images/0/05/Poison.png" }
+    ],
+    "apiGeneration": 1
+  },
+  {
+    "pokedexId": 4,
+    "name": "Salamèche",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png",
+    "stats": { "HP": 39, "attack": 52, "defense": 43, "special_attack": 60, "special_defense": 50, "speed": 65 },
+    "apiTypes": [
+      { "name": "Feu", "image": "https://static.wikia.nocookie.net/pokemongo/images/3/30/Fire.png" }
+    ],
+    "apiGeneration": 1
+  },
+  {
+    "pokedexId": 5,
+    "name": "Reptincel",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/5.png",
+    "stats": { "HP": 58, "attack": 64, "defense": 58, "special_attack": 80, "special_defense": 65, "speed": 80 },
+    "apiTypes": [
+      { "name": "Feu", "image": "https://static.wikia.nocookie.net/pokemongo/images/3/30/Fire.png" }
+    ],
+    "apiGeneration": 1
+  },
+  {
+    "pokedexId": 6,
+    "name": "Dracaufeu",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png",
+    "stats": { "HP": 78, "attack": 84, "defense": 78, "special_attack": 109, "special_defense": 85, "speed": 100 },
+    "apiTypes": [
+      { "name": "Feu", "image": "https://static.wikia.nocookie.net/pokemongo/images/3/30/Fire.png" },
+      { "name": "Vol", "image": "https://static.wikia.nocookie.net/pokemongo/images/b/b8/Flying.png" }
+    ],
+    "apiGeneration": 1
+  },
+  {
+    "pokedexId": 7,
+    "name": "Carapuce",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png",
+    "stats": { "HP": 44, "attack": 48, "defense": 65, "special_attack": 50, "special_defense": 64, "speed": 43 },
+    "apiTypes": [
+      { "name": "Eau", "image": "https://static.wikia.nocookie.net/pokemongo/images/9/9d/Water.png" }
+    ],
+    "apiGeneration": 1
+  },
+  {
+    "pokedexId": 8,
+    "name": "Carabaffe",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/8.png",
+    "stats": { "HP": 59, "attack": 63, "defense": 80, "special_attack": 65, "special_defense": 80, "speed": 58 },
+    "apiTypes": [
+      { "name": "Eau", "image": "https://static.wikia.nocookie.net/pokemongo/images/9/9d/Water.png" }
+    ],
+    "apiGeneration": 1
+  },
+  {
+    "pokedexId": 9,
+    "name": "Tortank",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/9.png",
+    "stats": { "HP": 79, "attack": 83, "defense": 100, "special_attack": 85, "special_defense": 105, "speed": 78 },
+    "apiTypes": [
+      { "name": "Eau", "image": "https://static.wikia.nocookie.net/pokemongo/images/9/9d/Water.png" }
+    ],
+    "apiGeneration": 1
+  },
+  {
+    "pokedexId": 25,
+    "name": "Pikachu",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png",
+    "stats": { "HP": 35, "attack": 55, "defense": 40, "special_attack": 50, "special_defense": 50, "speed": 90 },
+    "apiTypes": [
+      { "name": "Électrik", "image": "https://static.wikia.nocookie.net/pokemongo/images/a/a9/Electric.png" }
+    ],
+    "apiGeneration": 1
+  },
+  {
+    "pokedexId": 26,
+    "name": "Raichu",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/26.png",
+    "stats": { "HP": 60, "attack": 90, "defense": 55, "special_attack": 90, "special_defense": 80, "speed": 110 },
+    "apiTypes": [
+      { "name": "Électrik", "image": "https://static.wikia.nocookie.net/pokemongo/images/a/a9/Electric.png" }
+    ],
+    "apiGeneration": 1
+  },
+  {
+    "pokedexId": 39,
+    "name": "Rondoudou",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/39.png",
+    "stats": { "HP": 115, "attack": 45, "defense": 20, "special_attack": 45, "special_defense": 25, "speed": 20 },
+    "apiTypes": [
+      { "name": "Normal", "image": "https://static.wikia.nocookie.net/pokemongo/images/9/9f/Normal.png" },
+      { "name": "Fée", "image": "https://static.wikia.nocookie.net/pokemongo/images/f/f2/Fairy.png" }
+    ],
+    "apiGeneration": 1
+  },
+  {
+    "pokedexId": 52,
+    "name": "Miaouss",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/52.png",
+    "stats": { "HP": 40, "attack": 45, "defense": 35, "special_attack": 40, "special_defense": 40, "speed": 90 },
+    "apiTypes": [
+      { "name": "Normal", "image": "https://static.wikia.nocookie.net/pokemongo/images/9/9f/Normal.png" }
+    ],
+    "apiGeneration": 1
+  },
+  {
+    "pokedexId": 54,
+    "name": "Psykokwak",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/54.png",
+    "stats": { "HP": 50, "attack": 52, "defense": 48, "special_attack": 65, "special_defense": 50, "speed": 55 },
+    "apiTypes": [
+      { "name": "Eau", "image": "https://static.wikia.nocookie.net/pokemongo/images/9/9d/Water.png" }
+    ],
+    "apiGeneration": 1
+  },
+  {
+    "pokedexId": 63,
+    "name": "Abra",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/63.png",
+    "stats": { "HP": 25, "attack": 20, "defense": 15, "special_attack": 105, "special_defense": 55, "speed": 90 },
+    "apiTypes": [
+      { "name": "Psy", "image": "https://static.wikia.nocookie.net/pokemongo/images/b/bb/Psychic.png" }
+    ],
+    "apiGeneration": 1
+  },
+  {
+    "pokedexId": 94,
+    "name": "Gengar",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/94.png",
+    "stats": { "HP": 60, "attack": 65, "defense": 60, "special_attack": 130, "special_defense": 75, "speed": 110 },
+    "apiTypes": [
+      { "name": "Spectre", "image": "https://static.wikia.nocookie.net/pokemongo/images/1/17/Ghost.png" },
+      { "name": "Poison", "image": "https://static.wikia.nocookie.net/pokemongo/images/0/05/Poison.png" }
+    ],
+    "apiGeneration": 1
+  },
+  {
+    "pokedexId": 131,
+    "name": "Lokhlass",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/131.png",
+    "stats": { "HP": 130, "attack": 85, "defense": 80, "special_attack": 85, "special_defense": 95, "speed": 60 },
+    "apiTypes": [
+      { "name": "Eau", "image": "https://static.wikia.nocookie.net/pokemongo/images/9/9d/Water.png" },
+      { "name": "Glace", "image": "https://static.wikia.nocookie.net/pokemongo/images/f/ff/Ice.png" }
+    ],
+    "apiGeneration": 1
+  },
+  {
+    "pokedexId": 133,
+    "name": "Évoli",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/133.png",
+    "stats": { "HP": 55, "attack": 55, "defense": 50, "special_attack": 45, "special_defense": 65, "speed": 55 },
+    "apiTypes": [
+      { "name": "Normal", "image": "https://static.wikia.nocookie.net/pokemongo/images/9/9f/Normal.png" }
+    ],
+    "apiGeneration": 1
+  },
+  {
+    "pokedexId": 143,
+    "name": "Ronflex",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/143.png",
+    "stats": { "HP": 160, "attack": 110, "defense": 65, "special_attack": 65, "special_defense": 110, "speed": 30 },
+    "apiTypes": [
+      { "name": "Normal", "image": "https://static.wikia.nocookie.net/pokemongo/images/9/9f/Normal.png" }
+    ],
+    "apiGeneration": 1
+  },
+  {
+    "pokedexId": 144,
+    "name": "Artikodin",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/144.png",
+    "stats": { "HP": 90, "attack": 85, "defense": 100, "special_attack": 95, "special_defense": 125, "speed": 85 },
+    "apiTypes": [
+      { "name": "Glace", "image": "https://static.wikia.nocookie.net/pokemongo/images/f/ff/Ice.png" },
+      { "name": "Vol", "image": "https://static.wikia.nocookie.net/pokemongo/images/b/b8/Flying.png" }
+    ],
+    "apiGeneration": 1
+  },
+  {
+    "pokedexId": 145,
+    "name": "Électhor",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/145.png",
+    "stats": { "HP": 90, "attack": 90, "defense": 85, "special_attack": 125, "special_defense": 90, "speed": 100 },
+    "apiTypes": [
+      { "name": "Électrik", "image": "https://static.wikia.nocookie.net/pokemongo/images/a/a9/Electric.png" },
+      { "name": "Vol", "image": "https://static.wikia.nocookie.net/pokemongo/images/b/b8/Flying.png" }
+    ],
+    "apiGeneration": 1
+  },
+  {
+    "pokedexId": 146,
+    "name": "Sulfura",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/146.png",
+    "stats": { "HP": 90, "attack": 100, "defense": 90, "special_attack": 125, "special_defense": 85, "speed": 90 },
+    "apiTypes": [
+      { "name": "Feu", "image": "https://static.wikia.nocookie.net/pokemongo/images/3/30/Fire.png" },
+      { "name": "Vol", "image": "https://static.wikia.nocookie.net/pokemongo/images/b/b8/Flying.png" }
+    ],
+    "apiGeneration": 1
+  },
+  {
+    "pokedexId": 149,
+    "name": "Dracolosse",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/149.png",
+    "stats": { "HP": 91, "attack": 134, "defense": 95, "special_attack": 100, "special_defense": 100, "speed": 80 },
+    "apiTypes": [
+      { "name": "Dragon", "image": "https://static.wikia.nocookie.net/pokemongo/images/6/6c/Dragon.png" },
+      { "name": "Vol", "image": "https://static.wikia.nocookie.net/pokemongo/images/b/b8/Flying.png" }
+    ],
+    "apiGeneration": 1
+  },
+  {
+    "pokedexId": 150,
+    "name": "Mewtwo",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/150.png",
+    "stats": { "HP": 106, "attack": 110, "defense": 90, "special_attack": 154, "special_defense": 90, "speed": 130 },
+    "apiTypes": [
+      { "name": "Psy", "image": "https://static.wikia.nocookie.net/pokemongo/images/b/bb/Psychic.png" }
+    ],
+    "apiGeneration": 1
+  },
+  {
+    "pokedexId": 151,
+    "name": "Mew",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/151.png",
+    "stats": { "HP": 100, "attack": 100, "defense": 100, "special_attack": 100, "special_defense": 100, "speed": 100 },
+    "apiTypes": [
+      { "name": "Psy", "image": "https://static.wikia.nocookie.net/pokemongo/images/b/bb/Psychic.png" }
+    ],
+    "apiGeneration": 1
+  },
+  {
+    "pokedexId": 152,
+    "name": "Germignon",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/152.png",
+    "stats": { "HP": 45, "attack": 49, "defense": 65, "special_attack": 49, "special_defense": 65, "speed": 45 },
+    "apiTypes": [
+      { "name": "Plante", "image": "https://static.wikia.nocookie.net/pokemongo/images/c/c5/Grass.png" }
+    ],
+    "apiGeneration": 2
+  },
+  {
+    "pokedexId": 155,
+    "name": "Héricendre",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/155.png",
+    "stats": { "HP": 39, "attack": 52, "defense": 43, "special_attack": 60, "special_defense": 50, "speed": 65 },
+    "apiTypes": [
+      { "name": "Feu", "image": "https://static.wikia.nocookie.net/pokemongo/images/3/30/Fire.png" }
+    ],
+    "apiGeneration": 2
+  },
+  {
+    "pokedexId": 158,
+    "name": "Kaiminus",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/158.png",
+    "stats": { "HP": 45, "attack": 55, "defense": 35, "special_attack": 40, "special_defense": 40, "speed": 70 },
+    "apiTypes": [
+      { "name": "Eau", "image": "https://static.wikia.nocookie.net/pokemongo/images/9/9d/Water.png" }
+    ],
+    "apiGeneration": 2
+  },
+  {
+    "pokedexId": 175,
+    "name": "Togepi",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/175.png",
+    "stats": { "HP": 35, "attack": 20, "defense": 65, "special_attack": 40, "special_defense": 65, "speed": 20 },
+    "apiTypes": [
+      { "name": "Fée", "image": "https://static.wikia.nocookie.net/pokemongo/images/f/f2/Fairy.png" }
+    ],
+    "apiGeneration": 2
+  },
+  {
+    "pokedexId": 196,
+    "name": "Mentali",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/196.png",
+    "stats": { "HP": 65, "attack": 65, "defense": 60, "special_attack": 110, "special_defense": 95, "speed": 110 },
+    "apiTypes": [
+      { "name": "Psy", "image": "https://static.wikia.nocookie.net/pokemongo/images/b/bb/Psychic.png" }
+    ],
+    "apiGeneration": 2
+  },
+  {
+    "pokedexId": 197,
+    "name": "Noctali",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/197.png",
+    "stats": { "HP": 95, "attack": 65, "defense": 110, "special_attack": 60, "special_defense": 130, "speed": 65 },
+    "apiTypes": [
+      { "name": "Ténèbres", "image": "https://static.wikia.nocookie.net/pokemongo/images/c/c9/Dark.png" }
+    ],
+    "apiGeneration": 2
+  },
+  {
+    "pokedexId": 245,
+    "name": "Suicune",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/245.png",
+    "stats": { "HP": 100, "attack": 75, "defense": 115, "special_attack": 90, "special_defense": 115, "speed": 85 },
+    "apiTypes": [
+      { "name": "Eau", "image": "https://static.wikia.nocookie.net/pokemongo/images/9/9d/Water.png" }
+    ],
+    "apiGeneration": 2
+  },
+  {
+    "pokedexId": 249,
+    "name": "Lugia",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/249.png",
+    "stats": { "HP": 106, "attack": 90, "defense": 130, "special_attack": 90, "special_defense": 154, "speed": 110 },
+    "apiTypes": [
+      { "name": "Psy", "image": "https://static.wikia.nocookie.net/pokemongo/images/b/bb/Psychic.png" },
+      { "name": "Vol", "image": "https://static.wikia.nocookie.net/pokemongo/images/b/b8/Flying.png" }
+    ],
+    "apiGeneration": 2
+  },
+  {
+    "pokedexId": 250,
+    "name": "Ho-Oh",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/250.png",
+    "stats": { "HP": 106, "attack": 130, "defense": 90, "special_attack": 110, "special_defense": 154, "speed": 90 },
+    "apiTypes": [
+      { "name": "Feu", "image": "https://static.wikia.nocookie.net/pokemongo/images/3/30/Fire.png" },
+      { "name": "Vol", "image": "https://static.wikia.nocookie.net/pokemongo/images/b/b8/Flying.png" }
+    ],
+    "apiGeneration": 2
+  },
+  {
+    "pokedexId": 251,
+    "name": "Célébi",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/251.png",
+    "stats": { "HP": 100, "attack": 100, "defense": 100, "special_attack": 100, "special_defense": 100, "speed": 100 },
+    "apiTypes": [
+      { "name": "Psy", "image": "https://static.wikia.nocookie.net/pokemongo/images/b/bb/Psychic.png" },
+      { "name": "Plante", "image": "https://static.wikia.nocookie.net/pokemongo/images/c/c5/Grass.png" }
+    ],
+    "apiGeneration": 2
+  },
+  {
+    "pokedexId": 252,
+    "name": "Arcko",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/252.png",
+    "stats": { "HP": 45, "attack": 65, "defense": 45, "special_attack": 65, "special_defense": 45, "speed": 70 },
+    "apiTypes": [
+      { "name": "Plante", "image": "https://static.wikia.nocookie.net/pokemongo/images/c/c5/Grass.png" }
+    ],
+    "apiGeneration": 3
+  },
+  {
+    "pokedexId": 255,
+    "name": "Poussifeu",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/255.png",
+    "stats": { "HP": 45, "attack": 60, "defense": 40, "special_attack": 70, "special_defense": 50, "speed": 45 },
+    "apiTypes": [
+      { "name": "Feu", "image": "https://static.wikia.nocookie.net/pokemongo/images/3/30/Fire.png" }
+    ],
+    "apiGeneration": 3
+  },
+  {
+    "pokedexId": 258,
+    "name": "Gobou",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/258.png",
+    "stats": { "HP": 50, "attack": 70, "defense": 70, "special_attack": 50, "special_defense": 50, "speed": 40 },
+    "apiTypes": [
+      { "name": "Eau", "image": "https://static.wikia.nocookie.net/pokemongo/images/9/9d/Water.png" }
+    ],
+    "apiGeneration": 3
+  },
+  {
+    "pokedexId": 282,
+    "name": "Gardevoir",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/282.png",
+    "stats": { "HP": 68, "attack": 65, "defense": 65, "special_attack": 125, "special_defense": 115, "speed": 80 },
+    "apiTypes": [
+      { "name": "Psy", "image": "https://static.wikia.nocookie.net/pokemongo/images/b/bb/Psychic.png" },
+      { "name": "Fée", "image": "https://static.wikia.nocookie.net/pokemongo/images/f/f2/Fairy.png" }
+    ],
+    "apiGeneration": 3
+  },
+  {
+    "pokedexId": 384,
+    "name": "Rayquaza",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/384.png",
+    "stats": { "HP": 105, "attack": 150, "defense": 90, "special_attack": 150, "special_defense": 90, "speed": 95 },
+    "apiTypes": [
+      { "name": "Dragon", "image": "https://static.wikia.nocookie.net/pokemongo/images/6/6c/Dragon.png" },
+      { "name": "Vol", "image": "https://static.wikia.nocookie.net/pokemongo/images/b/b8/Flying.png" }
+    ],
+    "apiGeneration": 3
+  },
+  {
+    "pokedexId": 385,
+    "name": "Jirachi",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/385.png",
+    "stats": { "HP": 100, "attack": 100, "defense": 100, "special_attack": 100, "special_defense": 100, "speed": 100 },
+    "apiTypes": [
+      { "name": "Acier", "image": "https://static.wikia.nocookie.net/pokemongo/images/a/a5/Steel.png" },
+      { "name": "Psy", "image": "https://static.wikia.nocookie.net/pokemongo/images/b/bb/Psychic.png" }
+    ],
+    "apiGeneration": 3
+  },
+  {
+    "pokedexId": 448,
+    "name": "Lucario",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/448.png",
+    "stats": { "HP": 70, "attack": 110, "defense": 70, "special_attack": 115, "special_defense": 70, "speed": 90 },
+    "apiTypes": [
+      { "name": "Combat", "image": "https://static.wikia.nocookie.net/pokemongo/images/5/5f/Fighting.png" },
+      { "name": "Acier", "image": "https://static.wikia.nocookie.net/pokemongo/images/a/a5/Steel.png" }
+    ],
+    "apiGeneration": 4
+  },
+  {
+    "pokedexId": 445,
+    "name": "Carchacrok",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/445.png",
+    "stats": { "HP": 108, "attack": 130, "defense": 95, "special_attack": 80, "special_defense": 85, "speed": 102 },
+    "apiTypes": [
+      { "name": "Dragon", "image": "https://static.wikia.nocookie.net/pokemongo/images/6/6c/Dragon.png" },
+      { "name": "Sol", "image": "https://static.wikia.nocookie.net/pokemongo/images/4/4a/Ground.png" }
+    ],
+    "apiGeneration": 4
+  },
+  {
+    "pokedexId": 483,
+    "name": "Dialga",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/483.png",
+    "stats": { "HP": 100, "attack": 120, "defense": 120, "special_attack": 150, "special_defense": 100, "speed": 90 },
+    "apiTypes": [
+      { "name": "Acier", "image": "https://static.wikia.nocookie.net/pokemongo/images/a/a5/Steel.png" },
+      { "name": "Dragon", "image": "https://static.wikia.nocookie.net/pokemongo/images/6/6c/Dragon.png" }
+    ],
+    "apiGeneration": 4
+  },
+  {
+    "pokedexId": 484,
+    "name": "Palkia",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/484.png",
+    "stats": { "HP": 90, "attack": 120, "defense": 100, "special_attack": 150, "special_defense": 120, "speed": 100 },
+    "apiTypes": [
+      { "name": "Eau", "image": "https://static.wikia.nocookie.net/pokemongo/images/9/9d/Water.png" },
+      { "name": "Dragon", "image": "https://static.wikia.nocookie.net/pokemongo/images/6/6c/Dragon.png" }
+    ],
+    "apiGeneration": 4
+  },
+  {
+    "pokedexId": 487,
+    "name": "Giratina",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/487.png",
+    "stats": { "HP": 150, "attack": 100, "defense": 120, "special_attack": 100, "special_defense": 120, "speed": 90 },
+    "apiTypes": [
+      { "name": "Spectre", "image": "https://static.wikia.nocookie.net/pokemongo/images/1/17/Ghost.png" },
+      { "name": "Dragon", "image": "https://static.wikia.nocookie.net/pokemongo/images/6/6c/Dragon.png" }
+    ],
+    "apiGeneration": 4
+  },
+  {
+    "pokedexId": 643,
+    "name": "Reshiram",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/643.png",
+    "stats": { "HP": 100, "attack": 120, "defense": 100, "special_attack": 150, "special_defense": 120, "speed": 90 },
+    "apiTypes": [
+      { "name": "Dragon", "image": "https://static.wikia.nocookie.net/pokemongo/images/6/6c/Dragon.png" },
+      { "name": "Feu", "image": "https://static.wikia.nocookie.net/pokemongo/images/3/30/Fire.png" }
+    ],
+    "apiGeneration": 5
+  },
+  {
+    "pokedexId": 644,
+    "name": "Zekrom",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/644.png",
+    "stats": { "HP": 100, "attack": 150, "defense": 120, "special_attack": 120, "special_defense": 100, "speed": 90 },
+    "apiTypes": [
+      { "name": "Dragon", "image": "https://static.wikia.nocookie.net/pokemongo/images/6/6c/Dragon.png" },
+      { "name": "Électrik", "image": "https://static.wikia.nocookie.net/pokemongo/images/a/a9/Electric.png" }
+    ],
+    "apiGeneration": 5
+  },
+  {
+    "pokedexId": 700,
+    "name": "Sylveon",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/700.png",
+    "stats": { "HP": 95, "attack": 65, "defense": 65, "special_attack": 110, "special_defense": 130, "speed": 60 },
+    "apiTypes": [
+      { "name": "Fée", "image": "https://static.wikia.nocookie.net/pokemongo/images/f/f2/Fairy.png" }
+    ],
+    "apiGeneration": 6
+  },
+  {
+    "pokedexId": 716,
+    "name": "Xerneas",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/716.png",
+    "stats": { "HP": 126, "attack": 131, "defense": 95, "special_attack": 131, "special_defense": 98, "speed": 99 },
+    "apiTypes": [
+      { "name": "Fée", "image": "https://static.wikia.nocookie.net/pokemongo/images/f/f2/Fairy.png" }
+    ],
+    "apiGeneration": 6
+  },
+  {
+    "pokedexId": 717,
+    "name": "Yveltal",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/717.png",
+    "stats": { "HP": 126, "attack": 131, "defense": 95, "special_attack": 131, "special_defense": 98, "speed": 99 },
+    "apiTypes": [
+      { "name": "Ténèbres", "image": "https://static.wikia.nocookie.net/pokemongo/images/c/c9/Dark.png" },
+      { "name": "Vol", "image": "https://static.wikia.nocookie.net/pokemongo/images/b/b8/Flying.png" }
+    ],
+    "apiGeneration": 6
+  },
+  {
+    "pokedexId": 800,
+    "name": "Necrozma",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/800.png",
+    "stats": { "HP": 97, "attack": 107, "defense": 101, "special_attack": 127, "special_defense": 89, "speed": 79 },
+    "apiTypes": [
+      { "name": "Psy", "image": "https://static.wikia.nocookie.net/pokemongo/images/b/bb/Psychic.png" }
+    ],
+    "apiGeneration": 7
+  },
+  {
+    "pokedexId": 888,
+    "name": "Zacian",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/888.png",
+    "stats": { "HP": 92, "attack": 130, "defense": 115, "special_attack": 80, "special_defense": 115, "speed": 138 },
+    "apiTypes": [
+      { "name": "Fée", "image": "https://static.wikia.nocookie.net/pokemongo/images/f/f2/Fairy.png" }
+    ],
+    "apiGeneration": 8
+  },
+  {
+    "pokedexId": 889,
+    "name": "Zamazenta",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/889.png",
+    "stats": { "HP": 92, "attack": 130, "defense": 115, "special_attack": 80, "special_defense": 115, "speed": 138 },
+    "apiTypes": [
+      { "name": "Combat", "image": "https://static.wikia.nocookie.net/pokemongo/images/5/5f/Fighting.png" }
+    ],
+    "apiGeneration": 8
+  },
+  {
+    "pokedexId": 906,
+    "name": "Poussacha",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/906.png",
+    "stats": { "HP": 40, "attack": 61, "defense": 54, "special_attack": 45, "special_defense": 45, "speed": 65 },
+    "apiTypes": [
+      { "name": "Plante", "image": "https://static.wikia.nocookie.net/pokemongo/images/c/c5/Grass.png" }
+    ],
+    "apiGeneration": 9
+  },
+  {
+    "pokedexId": 907,
+    "name": "Feuillajou",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/907.png",
+    "stats": { "HP": 61, "attack": 80, "defense": 63, "special_attack": 60, "special_defense": 63, "speed": 83 },
+    "apiTypes": [
+      { "name": "Plante", "image": "https://static.wikia.nocookie.net/pokemongo/images/c/c5/Grass.png" }
+    ],
+    "apiGeneration": 9
+  },
+  {
+    "pokedexId": 908,
+    "name": "Meowscarada",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/908.png",
+    "stats": { "HP": 76, "attack": 110, "defense": 70, "special_attack": 81, "special_defense": 70, "speed": 123 },
+    "apiTypes": [
+      { "name": "Plante", "image": "https://static.wikia.nocookie.net/pokemongo/images/c/c5/Grass.png" },
+      { "name": "Ténèbres", "image": "https://static.wikia.nocookie.net/pokemongo/images/c/c9/Dark.png" }
+    ],
+    "apiGeneration": 9
+  },
+  {
+    "pokedexId": 909,
+    "name": "Chochodile",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/909.png",
+    "stats": { "HP": 67, "attack": 45, "defense": 59, "special_attack": 63, "special_defense": 40, "speed": 36 },
+    "apiTypes": [
+      { "name": "Feu", "image": "https://static.wikia.nocookie.net/pokemongo/images/3/30/Fire.png" }
+    ],
+    "apiGeneration": 9
+  },
+  {
+    "pokedexId": 910,
+    "name": "Crocallume",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/910.png",
+    "stats": { "HP": 81, "attack": 55, "defense": 78, "special_attack": 90, "special_defense": 58, "speed": 49 },
+    "apiTypes": [
+      { "name": "Feu", "image": "https://static.wikia.nocookie.net/pokemongo/images/3/30/Fire.png" }
+    ],
+    "apiGeneration": 9
+  },
+  {
+    "pokedexId": 911,
+    "name": "Skeledirge",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/911.png",
+    "stats": { "HP": 104, "attack": 75, "defense": 100, "special_attack": 110, "special_defense": 75, "speed": 66 },
+    "apiTypes": [
+      { "name": "Feu", "image": "https://static.wikia.nocookie.net/pokemongo/images/3/30/Fire.png" },
+      { "name": "Spectre", "image": "https://static.wikia.nocookie.net/pokemongo/images/1/17/Ghost.png" }
+    ],
+    "apiGeneration": 9
+  },
+  {
+    "pokedexId": 912,
+    "name": "Coiffeton",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/912.png",
+    "stats": { "HP": 55, "attack": 65, "defense": 45, "special_attack": 50, "special_defense": 45, "speed": 50 },
+    "apiTypes": [
+      { "name": "Eau", "image": "https://static.wikia.nocookie.net/pokemongo/images/9/9d/Water.png" }
+    ],
+    "apiGeneration": 9
+  },
+  {
+    "pokedexId": 913,
+    "name": "Colaqueen",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/913.png",
+    "stats": { "HP": 70, "attack": 78, "defense": 60, "special_attack": 74, "special_defense": 60, "speed": 65 },
+    "apiTypes": [
+      { "name": "Eau", "image": "https://static.wikia.nocookie.net/pokemongo/images/9/9d/Water.png" }
+    ],
+    "apiGeneration": 9
+  },
+  {
+    "pokedexId": 914,
+    "name": "Palmaval",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/914.png",
+    "stats": { "HP": 85, "attack": 120, "defense": 80, "special_attack": 85, "special_defense": 75, "speed": 85 },
+    "apiTypes": [
+      { "name": "Eau", "image": "https://static.wikia.nocookie.net/pokemongo/images/9/9d/Water.png" },
+      { "name": "Combat", "image": "https://static.wikia.nocookie.net/pokemongo/images/5/5f/Fighting.png" }
+    ],
+    "apiGeneration": 9
+  },
+  {
+    "pokedexId": 936,
+    "name": "Pawmi",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/936.png",
+    "stats": { "HP": 45, "attack": 70, "defense": 35, "special_attack": 70, "special_defense": 35, "speed": 70 },
+    "apiTypes": [
+      { "name": "Électrik", "image": "https://static.wikia.nocookie.net/pokemongo/images/a/a9/Electric.png" }
+    ],
+    "apiGeneration": 9
+  },
+  {
+    "pokedexId": 962,
+    "name": "Bombirdier",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/962.png",
+    "stats": { "HP": 70, "attack": 103, "defense": 85, "special_attack": 60, "special_defense": 85, "speed": 82 },
+    "apiTypes": [
+      { "name": "Vol", "image": "https://static.wikia.nocookie.net/pokemongo/images/b/b8/Flying.png" },
+      { "name": "Ténèbres", "image": "https://static.wikia.nocookie.net/pokemongo/images/c/c9/Dark.png" }
+    ],
+    "apiGeneration": 9
+  },
+  {
+    "pokedexId": 1000,
+    "name": "Gholdengo",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1000.png",
+    "stats": { "HP": 87, "attack": 60, "defense": 95, "special_attack": 133, "special_defense": 91, "speed": 84 },
+    "apiTypes": [
+      { "name": "Acier", "image": "https://static.wikia.nocookie.net/pokemongo/images/a/a5/Steel.png" },
+      { "name": "Spectre", "image": "https://static.wikia.nocookie.net/pokemongo/images/1/17/Ghost.png" }
+    ],
+    "apiGeneration": 9
+  },
+  {
+    "pokedexId": 1007,
+    "name": "Koraidon",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1007.png",
+    "stats": { "HP": 100, "attack": 135, "defense": 115, "special_attack": 85, "special_defense": 100, "speed": 135 },
+    "apiTypes": [
+      { "name": "Combat", "image": "https://static.wikia.nocookie.net/pokemongo/images/5/5f/Fighting.png" },
+      { "name": "Dragon", "image": "https://static.wikia.nocookie.net/pokemongo/images/6/6c/Dragon.png" }
+    ],
+    "apiGeneration": 9
+  },
+  {
+    "pokedexId": 1008,
+    "name": "Miraidon",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1008.png",
+    "stats": { "HP": 100, "attack": 85, "defense": 100, "special_attack": 135, "special_defense": 115, "speed": 135 },
+    "apiTypes": [
+      { "name": "Électrik", "image": "https://static.wikia.nocookie.net/pokemongo/images/a/a9/Electric.png" },
+      { "name": "Dragon", "image": "https://static.wikia.nocookie.net/pokemongo/images/6/6c/Dragon.png" }
+    ],
+    "apiGeneration": 9
+  }
+]
