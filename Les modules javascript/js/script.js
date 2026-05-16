@@ -1,36 +1,81 @@
 import { Pokemon } from './Pokemon.js';
 
+/* ================================
+   ÉTAT GLOBAL
+================================ */
 let allPokemons = [];
 let currentGeneration = 1;
 let currentType = null;
 let currentSort = 'id';
 
+
+/* ================================
+   MÉTHODES DE TRI
+================================ */
 const sorters = {
-  nom:     (a, b) => a.name.localeCompare(b.name),
-  hp:      (a, b) => b.stats.HP - a.stats.HP,
+  nom: (a, b) => a.name.localeCompare(b.name),
+
+  hp: (a, b) => b.stats.HP - a.stats.HP,
   attaque: (a, b) => b.stats.attack - a.stats.attack,
   defense: (a, b) => b.stats.defense - a.stats.defense,
   vitesse: (a, b) => b.stats.speed - a.stats.speed,
-  type:    (a, b) => a.apiTypes[0].name.localeCompare(b.apiTypes[0].name),
-  id:      (a, b) => a.apiId - b.apiId,
+
+  type: (a, b) =>
+    a.apiTypes[0].name.localeCompare(b.apiTypes[0].name),
+
+  id: (a, b) => a.apiId - b.apiId,
 };
 
+
+/* ================================
+   FILTRAGE + TRI
+================================ */
 const getFilteredSortedPokemons = () => {
-  let list = allPokemons.filter(p => p.apiGeneration === currentGeneration);
-  if (currentType) list = list.filter(p => p.apiTypes.some(t => t.name === currentType));
-  return [...list].sort(sorters[currentSort] ?? sorters.id);
+  // 1. Filtrer par génération
+  let filtered = allPokemons.filter(
+    p => p.apiGeneration === currentGeneration
+  );
+
+  // 2. Filtrer par type (si sélectionné)
+  if (currentType) {
+    filtered = filtered.filter(p =>
+      p.apiTypes.some(t => t.name === currentType)
+    );
+  }
+
+  // 3. Trier
+  const sorter = sorters[currentSort] ?? sorters.id;
+  return [...filtered].sort(sorter);
 };
 
+
+/* ================================
+   CRÉATION D'UNE CARTE POKÉMON
+================================ */
 const createCard = (pokemon) => {
-  const color = pokemon.apiTypes[0].color;
+  const mainType = pokemon.apiTypes[0];
+  const color = mainType.color;
+
   const article = document.createElement('article');
-  article.style.borderColor = article.style.backgroundColor = color;
+
+  // Style dynamique
+  article.style.borderColor = color;
+  article.style.backgroundColor = color;
+
+  // Contenu HTML
   article.innerHTML = `
     <figure>
-      <picture><img src="${pokemon.image}" alt="${pokemon.name}" /></picture>
+      <picture>
+        <img src="${pokemon.image}" alt="${pokemon.name}" />
+      </picture>
+
       <figcaption>
-        ${pokemon.apiTypes.map(t => `<span class="types">${t.name}</span>`).join(' ')}
+        ${pokemon.apiTypes
+          .map(t => `<span class="types">${t.name}</span>`)
+          .join(' ')}
+
         <h2>${pokemon.name}</h2>
+
         <ol>
           <li>Points de vie : ${pokemon.stats.HP}</li>
           <li>Attaque : ${pokemon.stats.attack}</li>
@@ -41,48 +86,114 @@ const createCard = (pokemon) => {
       </figcaption>
     </figure>
   `;
+
   return article;
 };
 
+
+/* ================================
+   BOUTONS DE FILTRE PAR TYPE
+================================ */
 const renderTypeButtons = (pokemons) => {
   const container = document.getElementById('types-container');
-  const uniqueTypes = [...new Set(pokemons.flatMap(p => p.apiTypes.map(t => t.name)))].sort();
+
+  // Extraire tous les types uniques
+  const uniqueTypes = [
+    ...new Set(
+      pokemons.flatMap(p => p.apiTypes.map(t => t.name))
+    )
+  ].sort();
+
   container.innerHTML = '';
+
+  // Ajouter bouton "Tous" + types
   [null, ...uniqueTypes].forEach(type => {
-    const btn = document.createElement('button');
-    btn.textContent = type ?? 'Tous';
-    btn.className = 'type-btn' + (currentType === type ? ' active' : '');
+    const button = document.createElement('button');
+
+    button.textContent = type ?? 'Tous';
+    button.className =
+      'type-btn' + (currentType === type ? ' active' : '');
+
+    // Couleur du bouton
     if (type) {
-      const found = pokemons.flatMap(p => p.apiTypes).find(t => t.name === type);
-      if (found) btn.style.backgroundColor = found.color;
+      const foundType = pokemons
+        .flatMap(p => p.apiTypes)
+        .find(t => t.name === type);
+
+      if (foundType) {
+        button.style.backgroundColor = foundType.color;
+      }
     }
-    btn.addEventListener('click', () => { currentType = type; render(); });
-    container.appendChild(btn);
+
+    // Action au clic
+    button.addEventListener('click', () => {
+      currentType = type;
+      render();
+    });
+
+    container.appendChild(button);
   });
 };
 
+
+/* ================================
+   RENDER GLOBAL
+================================ */
 const render = () => {
-  const byGen = allPokemons.filter(p => p.apiGeneration === currentGeneration);
-  renderTypeButtons(byGen);
-  const pokemons = getFilteredSortedPokemons();
   const main = document.querySelector('main');
-  main.innerHTML = pokemons.length === 0 ? '<p class="empty">Aucun Pokémon pour ces critères.</p>' : '';
-  pokemons.forEach(p => main.appendChild(createCard(p)));
+
+  // Pokémons de la génération actuelle
+  const pokemonsOfGen = allPokemons.filter(
+    p => p.apiGeneration === currentGeneration
+  );
+
+  // Mettre à jour les boutons de type
+  renderTypeButtons(pokemonsOfGen);
+
+  // Appliquer filtres + tri
+  const pokemons = getFilteredSortedPokemons();
+
+  // Message si aucun résultat
+  if (pokemons.length === 0) {
+    main.innerHTML =
+      '<p class="empty">Aucun Pokémon pour ces critères.</p>';
+    return;
+  }
+
+  // Affichage des cartes
+  main.innerHTML = '';
+  pokemons.forEach(p =>
+    main.appendChild(createCard(p))
+  );
 };
 
+
+/* ================================
+   INITIALISATION
+================================ */
 fetch('./data/data.json')
-  .then(r => r.json())
+  .then(response => response.json())
   .then(data => {
+    // Transformer en instances de classe
     allPokemons = data.map(d => new Pokemon(d));
+
     render();
-    document.getElementById('generation-select').addEventListener('change', function () {
-      currentGeneration = parseInt(this.value);
-      currentType = null;
-      render();
-    });
-    document.getElementById('sort-select').addEventListener('change', function () {
-      currentSort = this.value;
-      render();
-    });
+
+    // Changement de génération
+    document
+      .getElementById('generation-select')
+      .addEventListener('change', function () {
+        currentGeneration = parseInt(this.value);
+        currentType = null; // reset filtre
+        render();
+      });
+
+    // Changement de tri
+    document
+      .getElementById('sort-select')
+      .addEventListener('change', function () {
+        currentSort = this.value;
+        render();
+      });
   })
   .catch(console.error);

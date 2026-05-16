@@ -1,99 +1,132 @@
+/* ================================
+   GLOBAL
+================================ */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-    padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  padding: 20px;
 }
 
 h1 {
-    text-align: center;
-    color: #333;
+  text-align: center;
+  color: #333;
 }
 
+
+/* ================================
+   FILTRES
+================================ */
 .filtre {
-    text-align: center;
-    margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .filtre label {
-    font-weight: bold;
-    margin-right: 8px;
+  font-weight: bold;
+  margin-right: 8px;
 }
 
 select {
-    padding: 6px 10px;
-    font-size: 1rem;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    cursor: pointer;
+  padding: 6px 10px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  cursor: pointer;
 }
 
+
+/* ================================
+   LAYOUT PRINCIPAL
+================================ */
 main {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 5%;
 }
 
+
+/* ================================
+   CARTE POKÉMON
+================================ */
 article {
-    width: 220px;
-    border-radius: 12px;
-    border: 4px solid grey;
-    background-color: grey;
-    overflow: hidden;
-    margin: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-}
+  width: 220px;
+  margin: 10px;
 
-picture {
-    display: block;
-    background-color: rgba(0,0,0,0.15);
-}
+  border-radius: 12px;
+  border: 4px solid grey;
+  background-color: grey;
 
-article img {
-    width: 80%;
-    margin: auto;
-    display: block;
-}
-
-figcaption {
-    background-color: rgba(255,255,255,0.3);
-    padding-top: 14px;
-}
-
-.types {
-    display: flex;
-    gap: 5px;
-    padding: 0 10px 5px;
-}
-
-.types span {
-    background-color: rgba(0,0,0,0.3);
-    color: #fff;
-    padding: 3px 8px;
-    border-radius: 4px;
-    font-size: 0.75rem;
-}
-
-ol {
-    list-style: none;
-    margin: 0;
-    padding: 10px 15px 15px;
-    font-size: 0.85rem;
-}
-
-ol li {
-    margin-bottom: 3px;
-}
-
-h2 {
-    text-align: center;
-    margin: 6px 0;
-    font-size: 1.1rem;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 figure {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+
+/* ================================
+   IMAGE
+================================ */
+picture {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+article img {
+  display: block;
+  width: 80%;
+  margin: auto;
+}
+
+
+/* ================================
+   CONTENU TEXTE
+================================ */
+figcaption {
+  background-color: rgba(255, 255, 255, 0.3);
+  padding-top: 14px;
+}
+
+h2 {
+  text-align: center;
+  margin: 6px 0;
+  font-size: 1.1rem;
+}
+
+
+/* ================================
+   TYPES
+================================ */
+.types {
+  display: flex;
+  gap: 5px;
+  padding: 0 10px 5px;
+}
+
+.types span {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+}
+
+
+/* ================================
+   STATS
+================================ */
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 10px 15px 15px;
+  font-size: 0.85rem;
+}
+
+ol li {
+  margin-bottom: 3px;
 }
