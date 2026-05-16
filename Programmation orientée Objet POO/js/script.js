@@ -1,125 +1,191 @@
-  class Type {
-    constructor(data) {
-      this.name = data.name;
-      this.image = data.image ?? null;
-      this.color = this.getColorHexa();
-    }
-
-    getColorHexa() {
-      const typeColors = {
-        Plante: '#4caf50', Feu: '#cc6e1a', Eau: '#1a1aff', Poison: '#a040a0',
-        Électrik: '#f0c030', Psy: '#f85888', Spectre: '#705898', Dragon: '#7038f8',
-        Glace: '#98d8d8', Normal: '#a8a878', Vol: '#a890f0', Combat: '#c03028',
-        Acier: '#b8b8d0', Fée: '#ee99ac', Ténèbres: '#705848', Sol: '#e0c068',
-      };
-      return typeColors[this.name] ?? '#808080';
-    }
+class Type {
+  constructor({ name, image = null }) {
+    this.name = name;
+    this.image = image;
+    this.color = Type.getColor(name);
   }
 
-  class Pokemon {
-    constructor(data) {
-      this.id = data.apiId;
-      this.image = data.image;
-      this.name = data.name;
-      this.apiTypes = data.apiTypes.map(t => new Type(t));
-      this.apiGeneration = data.apiGeneration;
-      this.attack = data.stats.attack;
-      this.defense = data.stats.defense;
-      this.special_attack = data.stats.special_attack;
-      this.speed = data.stats.speed;
-      this.hp = data.stats.HP;
-    }
+  static getColor(name) {
+    const colors = {
+      Plante: '#4caf50',
+      Feu: '#cc6e1a',
+      Eau: '#1a1aff',
+      Poison: '#a040a0',
+      Électrik: '#f0c030',
+      Psy: '#f85888',
+      Spectre: '#705898',
+      Dragon: '#7038f8',
+      Glace: '#98d8d8',
+      Normal: '#a8a878',
+      Vol: '#a890f0',
+      Combat: '#c03028',
+      Acier: '#b8b8d0',
+      Fée: '#ee99ac',
+      Ténèbres: '#705848',
+      Sol: '#e0c068',
+    };
 
-    displayCard() {
-      const color = this.apiTypes[0].color;
-      const article = document.createElement('article');
-      article.style.borderColor = color;
-      article.style.backgroundColor = color;
-      article.innerHTML = `
-        <figure>
-          <picture><img src="${this.image}" alt="${this.name}" /></picture>
-          <figcaption>
-            ${this.apiTypes.map(t => `<span class="types">${t.name}</span>`).join(' ')}
-            <h2>${this.name}</h2>
-            <ol>
-              <li>Points de vie : ${this.hp}</li>
-              <li>Attaque : ${this.attack}</li>
-              <li>Défense : ${this.defense}</li>
-              <li>Attaque spécial : ${this.special_attack}</li>
-              <li>Vitesse : ${this.speed}</li>
-            </ol>
-          </figcaption>
-        </figure>
-      `;
-      return article;
-    }
+    return colors[name] ?? '#808080';
+  }
+}
+
+class Pokemon {
+  constructor(data) {
+    this.id = data.apiId;
+    this.name = data.name;
+    this.image = data.image;
+
+    this.generation = data.apiGeneration;
+
+    this.types = data.apiTypes.map(t => new Type(t));
+
+    const stats = data.stats;
+    this.stats = {
+      hp: stats.HP,
+      attack: stats.attack,
+      defense: stats.defense,
+      specialAttack: stats.special_attack,
+      speed: stats.speed,
+    };
   }
 
-  let allPokemons = [];
-  let currentGeneration = 1;
-  let currentType = null;
-  let currentSort = 'id';
+  createCard() {
+    const primaryColor = this.types[0]?.color ?? '#ccc';
 
-  const sorters = {
-    nom:     (a, b) => a.name.localeCompare(b.name),
-    hp:      (a, b) => b.hp - a.hp,
-    attaque: (a, b) => b.attack - a.attack,
-    defense: (a, b) => b.defense - a.defense,
-    vitesse: (a, b) => b.speed - a.speed,
-    type:    (a, b) => a.apiTypes[0].name.localeCompare(b.apiTypes[0].name),
-    id:      (a, b) => a.id - b.id,
-  };
+    const el = document.createElement('article');
+    el.style.borderColor = primaryColor;
+    el.style.backgroundColor = primaryColor;
 
-  const getFilteredSortedPokemons = () => {
-    let list = allPokemons.filter(p => p.apiGeneration === currentGeneration);
-    if (currentType) list = list.filter(p => p.apiTypes.some(t => t.name === currentType));
-    return [...list].sort(sorters[currentSort] ?? sorters.id);
-  };
+    el.innerHTML = `
+      <figure>
+        <img src="${this.image}" alt="${this.name}" />
 
-  const renderTypeButtons = (pokemons) => {
-    const container = document.getElementById('types-container');
-    const uniqueTypes = [...new Set(pokemons.flatMap(p => p.apiTypes.map(t => t.name)))].sort();
+        <figcaption>
+          <div class="types">
+            ${this.types.map(t => `<span>${t.name}</span>`).join(' ')}
+          </div>
 
-    container.innerHTML = '';
+          <h2>${this.name}</h2>
 
-    [null, ...uniqueTypes].forEach(type => {
-      const btn = document.createElement('button');
-      btn.textContent = type ?? 'Tous';
-      btn.className = 'type-btn' + (currentType === type ? ' active' : '');
-      if (type) {
-        const tempType = new Type({ name: type });
-        btn.style.backgroundColor = tempType.color;
-      }
-      btn.addEventListener('click', () => { currentType = type; render(); });
-      container.appendChild(btn);
-    });
-  };
+          <ul>
+            <li>PV : ${this.stats.hp}</li>
+            <li>Attaque : ${this.stats.attack}</li>
+            <li>Défense : ${this.stats.defense}</li>
+            <li>Att. spéciale : ${this.stats.specialAttack}</li>
+            <li>Vitesse : ${this.stats.speed}</li>
+          </ul>
+        </figcaption>
+      </figure>
+    `;
 
-  const render = () => {
-    const byGen = allPokemons.filter(p => p.apiGeneration === currentGeneration);
-    renderTypeButtons(byGen);
+    return el;
+  }
+}
 
-    const pokemons = getFilteredSortedPokemons();
-    const main = document.querySelector('main');
-    main.innerHTML = pokemons.length === 0
-      ? '<p class="empty">Aucun Pokémon pour ces critères.</p>'
-      : '';
-    pokemons.forEach(p => main.appendChild(p.displayCard()));
-  };
+/* -------------------- État global -------------------- */
 
-  fetch('./data/data.json')
-    .then(r => r.json())
-    .then(data => {
-      allPokemons = data.map(d => new Pokemon(d));
+let pokemons = [];
+let generation = 1;
+let selectedType = null;
+let sortMode = 'id';
+
+/* -------------------- Tri -------------------- */
+
+const sorters = {
+  nom: (a, b) => a.name.localeCompare(b.name),
+  hp: (a, b) => b.stats.hp - a.stats.hp,
+  attaque: (a, b) => b.stats.attack - a.stats.attack,
+  defense: (a, b) => b.stats.defense - a.stats.defense,
+  vitesse: (a, b) => b.stats.speed - a.stats.speed,
+  type: (a, b) =>
+    a.types[0].name.localeCompare(b.types[0].name),
+  id: (a, b) => a.id - b.id,
+};
+
+/* -------------------- Filtrage -------------------- */
+
+function getVisiblePokemons() {
+  let list = pokemons.filter(p => p.generation === generation);
+
+  if (selectedType) {
+    list = list.filter(p =>
+      p.types.some(t => t.name === selectedType)
+    );
+  }
+
+  return list.sort(sorters[sortMode] ?? sorters.id);
+}
+
+/* -------------------- UI Types -------------------- */
+
+function renderTypeButtons(list) {
+  const container = document.getElementById('types-container');
+  container.innerHTML = '';
+
+  const types = [
+    null,
+    ...new Set(
+      list.flatMap(p => p.types.map(t => t.name))
+    ),
+  ].sort();
+
+  types.forEach(type => {
+    const btn = document.createElement('button');
+
+    btn.textContent = type ?? 'Tous';
+    btn.className = 'type-btn' + (selectedType === type ? ' active' : '');
+
+    if (type) {
+      btn.style.backgroundColor = new Type({ name: type }).color;
+    }
+
+    btn.onclick = () => {
+      selectedType = type;
       render();
-      document.getElementById('generation-select').addEventListener('change', function () {
-        currentGeneration = parseInt(this.value);
-        currentType = null;
-        render();
-      });
-      document.getElementById('sort-select').addEventListener('change', function () {
-        currentSort = this.value;
-        render();
-      });
-    })
-    .catch(console.error);
+    };
+
+    container.appendChild(btn);
+  });
+}
+
+/* -------------------- Render principal -------------------- */
+
+function render() {
+  const baseList = pokemons.filter(p => p.generation === generation);
+
+  renderTypeButtons(baseList);
+
+  const visible = getVisiblePokemons();
+  const main = document.querySelector('main');
+
+  main.innerHTML = '';
+
+  if (!visible.length) {
+    main.innerHTML = '<p class="empty">Aucun Pokémon trouvé.</p>';
+    return;
+  }
+
+  visible.forEach(p => main.appendChild(p.createCard()));
+}
+
+/* -------------------- Init -------------------- */
+
+fetch('./data/data.json')
+  .then(r => r.json())
+  .then(data => {
+    pokemons = data.map(d => new Pokemon(d));
+
+    render();
+
+    document.getElementById('generation-select').onchange = e => {
+      generation = +e.target.value;
+      selectedType = null;
+      render();
+    };
+
+    document.getElementById('sort-select').onchange = e => {
+      sortMode = e.target.value;
+      render();
+    };
+  })
+  .catch(console.error);
