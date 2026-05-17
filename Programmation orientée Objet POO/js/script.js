@@ -5,6 +5,7 @@ class Type {
     this.color = Type.getColor(name);
   }
 
+  // Couleur associée au type
   static getColor(name) {
     const colors = {
       Plante: '#4caf50',
@@ -34,9 +35,7 @@ class Pokemon {
     this.id = data.apiId;
     this.name = data.name;
     this.image = data.image;
-
     this.generation = data.apiGeneration;
-
     this.types = data.apiTypes.map(t => new Type(t));
 
     const stats = data.stats;
@@ -49,6 +48,7 @@ class Pokemon {
     };
   }
 
+  // Carte HTML du Pokémon
   createCard() {
     const primaryColor = this.types[0]?.color ?? '#ccc';
 
@@ -82,14 +82,10 @@ class Pokemon {
   }
 }
 
-/* -------------------- État global -------------------- */
-
 let pokemons = [];
 let generation = 1;
 let selectedType = null;
 let sortMode = 'id';
-
-/* -------------------- Tri -------------------- */
 
 const sorters = {
   nom: (a, b) => a.name.localeCompare(b.name),
@@ -97,13 +93,11 @@ const sorters = {
   attaque: (a, b) => b.stats.attack - a.stats.attack,
   defense: (a, b) => b.stats.defense - a.stats.defense,
   vitesse: (a, b) => b.stats.speed - a.stats.speed,
-  type: (a, b) =>
-    a.types[0].name.localeCompare(b.types[0].name),
+  type: (a, b) => a.types[0].name.localeCompare(b.types[0].name),
   id: (a, b) => a.id - b.id,
 };
 
-/* -------------------- Filtrage -------------------- */
-
+// Pokémons visibles selon les filtres
 function getVisiblePokemons() {
   let list = pokemons.filter(p => p.generation === generation);
 
@@ -116,17 +110,14 @@ function getVisiblePokemons() {
   return list.sort(sorters[sortMode] ?? sorters.id);
 }
 
-/* -------------------- UI Types -------------------- */
-
+// Boutons de filtre par type
 function renderTypeButtons(list) {
   const container = document.getElementById('types-container');
   container.innerHTML = '';
 
   const types = [
     null,
-    ...new Set(
-      list.flatMap(p => p.types.map(t => t.name))
-    ),
+    ...new Set(list.flatMap(p => p.types.map(t => t.name))),
   ].sort();
 
   types.forEach(type => {
@@ -148,8 +139,7 @@ function renderTypeButtons(list) {
   });
 }
 
-/* -------------------- Render principal -------------------- */
-
+// Rendu principal
 function render() {
   const baseList = pokemons.filter(p => p.generation === generation);
 
@@ -168,8 +158,7 @@ function render() {
   visible.forEach(p => main.appendChild(p.createCard()));
 }
 
-/* -------------------- Init -------------------- */
-
+// Chargement initial
 fetch('./data/data.json')
   .then(r => r.json())
   .then(data => {

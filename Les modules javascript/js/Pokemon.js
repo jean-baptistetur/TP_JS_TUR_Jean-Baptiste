@@ -1,8 +1,7 @@
 import { Type } from './Type.js';
 
-/* ================================
-   CLASSE POKÉMON
-================================ */
+
+   // CLASSE POKÉMON
 export class Pokemon {
   constructor(data) {
     // === IDENTITÉ ===
@@ -20,11 +19,8 @@ export class Pokemon {
     this.apiTypes = this.createTypes(data.apiTypes);
   }
 
-  /**
-   * Transforme les types bruts en objets Type
-   * @param {Array} types
-   * @returns {Type[]}
-   */
+  //Transforme les types bruts en objets Type
+   
   createTypes(types) {
     return types.map(type => new Type(type.name));
   }

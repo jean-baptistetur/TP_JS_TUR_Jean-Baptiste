@@ -3,6 +3,7 @@ let currentGeneration = 1;
 let currentType = null;
 let currentSort = 'id';
 
+// Couleurs associées aux types de Pokémon
 const typeColors = {
   Plante: '#4caf50',
   Feu: '#cc6e1a',
@@ -22,6 +23,7 @@ const typeColors = {
   Sol: '#e0c068',
 };
 
+// Gestion des tris disponibles
 const sorters = {
   nom: (a, b) => a.name.localeCompare(b.name),
   hp: (a, b) => b.stats.HP - a.stats.HP,
@@ -32,8 +34,10 @@ const sorters = {
   id: (a, b) => a.apiId - b.apiId,
 };
 
+// Retourne la couleur d’un type (fallback gris si inconnu)
 const getTypeColor = (typeName) => typeColors[typeName] ?? 'grey';
 
+// Filtre + tri des Pokémon selon génération / type / tri choisi
 const filterAndSortPokemons = () => {
   let list = allPokemons.filter(
     pokemon => pokemon.apiGeneration === currentGeneration
@@ -48,6 +52,7 @@ const filterAndSortPokemons = () => {
   return [...list].sort(sorters[currentSort] ?? sorters.id);
 };
 
+// Création d’une carte Pokémon
 const createCard = (pokemon) => {
   const primaryType = pokemon.apiTypes[0]?.name;
   const color = getTypeColor(primaryType);
@@ -83,16 +88,20 @@ const createCard = (pokemon) => {
   return article;
 };
 
+// Génération des boutons de filtre par type
 const renderTypeButtons = (pokemons) => {
   const container = document.getElementById('types-container');
+
   const uniqueTypes = [...new Set(
     pokemons.flatMap(pokemon => pokemon.apiTypes.map(type => type.name))
   )].sort();
 
   container.innerHTML = '';
 
+  // bouton "Tous" + types uniques
   [null, ...uniqueTypes].forEach(typeName => {
     const button = document.createElement('button');
+
     button.textContent = typeName ?? 'Tous';
     button.className = `type-btn${currentType === typeName ? ' active' : ''}`;
 
@@ -109,6 +118,7 @@ const renderTypeButtons = (pokemons) => {
   });
 };
 
+// Rendu principal de l’application
 const render = () => {
   const pokemonsOfGeneration = allPokemons.filter(
     pokemon => pokemon.apiGeneration === currentGeneration
@@ -121,26 +131,31 @@ const render = () => {
 
   main.innerHTML = '';
 
+  // Message si aucun résultat
   if (pokemons.length === 0) {
     main.innerHTML = '<p class="empty">Aucun Pokémon pour ces critères.</p>';
     return;
   }
 
+  // Affichage des cartes
   pokemons.forEach(pokemon => main.appendChild(createCard(pokemon)));
 };
 
+// Chargement des données + init app
 fetch('./data/data.json')
   .then(response => response.json())
   .then(data => {
     allPokemons = data;
     render();
 
+    // Changement de génération
     document.getElementById('generation-select').addEventListener('change', function () {
       currentGeneration = Number(this.value);
       currentType = null;
       render();
     });
 
+    // Changement de tri
     document.getElementById('sort-select').addEventListener('change', function () {
       currentSort = this.value;
       render();
